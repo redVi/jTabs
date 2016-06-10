@@ -6,6 +6,7 @@
 
 /* == PARAMETERS ==
  * reuired parameter: container
+ * additional parameters: activeBtnClass, activeTabClass
  *
  * == HOW IT WORKS ==
  * - take DOM-container as parameter
@@ -13,12 +14,12 @@
  * - and switch them
  */
 
-var jTabs = (function (container) {
+var jTabs = (function (container, activeBtnClass, activeTabClass) {
   'use strict';
 
   var container      = document.querySelector(container);
-  var activeBtnClass = 'btn-active-js';
-  var activeTabClass = 'tab-active-js';
+  var activeBtnClass = activeBtnClass || 'tabs-buttons__btn--active';
+  var activeTabClass = activeTabClass || 'tab-active-js';
 
   if (!container) { return false; }
 
@@ -45,7 +46,6 @@ var jTabs = (function (container) {
       goToTab(index);
     });
   };
-
 
   goToTab = function(index) {
     clearActiveClasses();
