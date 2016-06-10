@@ -1,14 +1,17 @@
-/*
-* Tabs-js
-* ========================================================================== */
+/* ==== Important styles ==== */
+.tab-js {
+  display: none !important; }
 
+.tab-active-js {
+  display: block !important; }
+
+
+/* ==== Custom Styles ==== */
 .tabs-header {
   font-size: 25px;
   text-align: center;
   margin: 3rem auto;
 }
-
-
 
 .centering-layer {
   width: 100%;
@@ -16,10 +19,9 @@
   margin: 2rem auto;
 }
 
-
-
 .tabs-block-buttons {
   font-size: 14px; }
+
   .tabs-block-buttons__btn {
     display: block;
     width: 100%;
@@ -34,29 +36,20 @@
     cursor: pointer;
     transition: background-color .3s; }
 
-  .tabs-block-buttons__btn:hover,
-  .tabs-block-buttons__btn--active {
+  .tabs-block-buttons__btn:hover, .btn-active-js {
     color: #fff;
     background-color: #4EC6DE; }
 
 
-
 .tabs-block-sections {
-  position: relative;
   padding: 10px 20px;
   border: 2px solid #4EC6DE; }
-
-  .tabs-block-sections__section {
-    display: none; }
-
-    .tabs-block-sections__section--active {
-      display: block; }
-
 
 
 @media screen and (min-width: 640px) {
   .tabs-block-buttons {
     font-size: 0; }
+
   .tabs-block-buttons__btn {
     width: auto;
     display: inline-block;
