@@ -1,19 +1,18 @@
 # jTabs
 The tabs in pure JavaScript.
 
-## Parameters
+## What that means
 
 jTabs takes one reuired parameter: `container`.
 Marup takes classes with prefix `-js` for correct work.
 
 - `container` is your DOM-element where are the tabs
 - `btn-js`: all buttons
-- `btn-active-js`: current active button
 - `tab-js`: all sections
 - `tab-active-js`: current active section
 
 
-## How to use
+## Example
 
 By default HTML-markup should be like this:
 
@@ -21,7 +20,7 @@ By default HTML-markup should be like this:
 <div class="centering-layer  tabs-js">
 
   <div class="tabs-block-buttons">
-    <button class="tabs-block-buttons__btn  tabs-block-buttons__btn--active  btn-js  btn-active-js">HTML Active Tab</button>
+    <button class="tabs-block-buttons__btn  tabs-block-buttons__btn--active  btn-js">HTML Active Tab</button>
     <button class="tabs-block-buttons__btn  btn-js">CSS</button>
   </div>
 
@@ -31,11 +30,13 @@ By default HTML-markup should be like this:
   </div>
 
 </div>
-
 <script src="js/jtabs.js"></script>
 <script>
-  // pass the wrapper class
-  jTabs('.tabs-js');
+  // Parameters:
+  // 1. wrapper class. Example: `.tabs-js`
+  // 2. any class for styling active button. Example: `tabs-block-buttons__btn--active`
+  // 3. any class for styling active tab. Example: 'tab-active-js'
+  jTabs('.tabs-js', 'tabs-block-buttons__btn--active', 'tab-active-js');
 </script>
 ```
 
@@ -43,14 +44,9 @@ By default HTML-markup should be like this:
 ## About styles
 
 Define wrapper-class and classes with prefix `-js`. Customize styles as you wish.
-Important are only the following styles:
+Styles for active tab are important and must contains following lines:
 
 ```CSS
-.tab-js {
-  display: none !important; }
-
-.tab-active-js {
-  display: block !important; }
+.tab-js { display: none; }
+.tab-active-js { display: block; }
 ```
-
-Don't change them.

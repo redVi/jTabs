@@ -1,28 +1,24 @@
-/* ==== Important styles ==== */
-.tab-js {
-  display: none !important; }
+/*
+* jTabs styles
+* ========================================================================== */
 
-.tab-active-js {
-  display: block !important; }
+.tab-js { display: none; }
+.tab-active-js { display: block; }
 
-
-/* ==== Custom Styles ==== */
 .tabs-header {
   font-size: 25px;
   text-align: center;
-  margin: 3rem auto;
-}
+  margin: 3rem auto; }
 
 .centering-layer {
   width: 100%;
   max-width: 800px;
-  margin: 2rem auto;
-}
+  margin: 2rem auto; }
 
-.tabs-block-buttons {
+.tabs-buttons {
   font-size: 14px; }
 
-  .tabs-block-buttons__btn {
+  .tabs-buttons__btn {
     display: block;
     width: 100%;
     text-decoration: none;
@@ -36,25 +32,26 @@
     cursor: pointer;
     transition: background-color .3s; }
 
-  .tabs-block-buttons__btn:hover, .btn-active-js {
+  .tabs-buttons__btn:hover,
+  .tabs-buttons__btn--active {
     color: #fff;
     background-color: #4EC6DE; }
 
 
-.tabs-block-sections {
+.tabs-sections {
   padding: 10px 20px;
   border: 2px solid #4EC6DE; }
 
 
 @media screen and (min-width: 640px) {
-  .tabs-block-buttons {
+  .tabs-buttons {
     font-size: 0; }
 
-  .tabs-block-buttons__btn {
+  .tabs-buttons__btn {
     width: auto;
     display: inline-block;
     font-size: 14px; }
 
-  .tabs-block-buttons__btn:not(:last-child) {
+  .tabs-buttons__btn:not(:last-child) {
     margin-right: 5px; }
 }
