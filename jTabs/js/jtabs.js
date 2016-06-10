@@ -6,8 +6,6 @@
 
 /* == PARAMETERS ==
  * reuired parameter: container
- * additional parameters: activeTabClass, activeBtnClass
- *
  *
  * == HOW IT WORKS ==
  * - take DOM-container as parameter
