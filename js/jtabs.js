@@ -6,8 +6,6 @@
 
 /* == PARAMETERS ==
  * reuired parameter: container
- * additional parameters: activeTabClass, activeBtnClass
- *
  *
  * == HOW IT WORKS ==
  * - take DOM-container as parameter
@@ -15,20 +13,22 @@
  * - and switch them
  */
 
-var jTabs = (function (container, activeTabClass, activeBtnClass) {
+var jTabs = (function (container) {
   'use strict';
 
   var container      = document.querySelector(container);
-  var activeBtnClass = activeBtnClass || 'tabs-block-buttons__btn--active';
-  var activeTabClass = activeTabClass || 'tabs-block-sections__section--active';
+  var activeBtnClass = 'btn-active-js';
+  var activeTabClass = 'tab-active-js';
 
   if (!container) { return false; }
 
-  var buttons       = container.querySelectorAll('.tabs-block-buttons__btn');
-  var tabs          = container.querySelectorAll('.tabs-block-sections__section');
+  var buttons       = container.querySelectorAll('.btn-js');
+  var tabs          = container.querySelectorAll('.tab-js');
   var activeIndex   = 0;
   var buttonIndex;
   var eventBtn;
+  var goToTab;
+  var clearActiveClasses;
 
 
   for (buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
@@ -47,7 +47,7 @@ var jTabs = (function (container, activeTabClass, activeBtnClass) {
   };
 
 
-  var goToTab = function(index) {
+  goToTab = function(index) {
     clearActiveClasses();
 
     /* switch classes */
@@ -62,7 +62,7 @@ var jTabs = (function (container, activeTabClass, activeBtnClass) {
   };
 
 
-  var clearActiveClasses = function() {
+  clearActiveClasses = function() {
     /* remove active classes from all tabs and sections */
     for (var tab = 0; tab < tabs.length; tab++) {
       tabs[tab].classList.remove(activeTabClass);
