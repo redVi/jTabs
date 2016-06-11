@@ -1,0 +1,28 @@
+{
+  "name": "jtabs",
+  "version": "1.0.0",
+  "description": "Pure JavaScript tabs",
+  "main": "jtabs/jtabs.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redVi/jTabs.git"
+  },
+  "keywords": [
+    "tabs",
+    "responsive",
+    "JavaScript"
+  ],
+  "author": "redVi <liberty195@gmail.com>",
+  "contributors": [
+    {
+      "name": "redVi",
+      "email": "liberty195@gmail.com",
+      "url": "http://redvi.github.io/"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redVi/jTabs/issues"
+  },
+  "homepage": "https://github.com/redVi/jTabs#readme"
+}

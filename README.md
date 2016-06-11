@@ -1,10 +1,21 @@
 # jTabs
 The tabs in pure JavaScript.
 
-## What that means
+Demo: http://redvi.github.io/jTabs
 
-jTabs takes one reuired parameter: `container`.
-Marup takes classes with prefix `-js` for correct work.
+
+## Installation with NPM
+
+```
+$ npm install --save jtabs
+```
+
+## Using
+
+jTabs takes one reuired parameter `container` and two additional parameters:
+classes for active button and active section.
+
+Your markup must have classes with prefix `-js` for correct work.
 
 - `container` is your DOM-element where are the tabs
 - `btn-js`: all buttons
@@ -12,12 +23,10 @@ Marup takes classes with prefix `-js` for correct work.
 - `tab-active-js`: current active section
 
 
-## Example
-
-By default HTML-markup should be like this:
+By default HTML-markup looks like this:
 
 ```html
-<div class="centering-layer  tabs-js">
+<div class="centering-layer  tabs-js"><!-- container -->
 
   <div class="tabs-block-buttons">
     <button class="tabs-block-buttons__btn  tabs-block-buttons__btn--active  btn-js">HTML Active Tab</button>
@@ -43,8 +52,8 @@ By default HTML-markup should be like this:
 
 ## About styles
 
-Define wrapper-class and classes with prefix `-js`. Customize styles as you wish.
-Styles for active tab are important and must contains following lines:
+Customize the styles as you want. But don't forget: styles for active tab
+are important and must contains following lines:
 
 ```CSS
 .tab-js { display: none; }
