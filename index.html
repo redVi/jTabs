@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="jtabs/jtabs.css">
+  <link rel="stylesheet" href="build/jtabs.min.css">
   <title>JavaScript Tabs</title>
 </head>
 
 <body>
   <h1 class="tabs-header">jTabs &mdash; pure JavaScript tabs</h1>
-  <main class="centering-layer  tabs-js">
+  <main class="centering-layer  tabs-container">
 
     <div class="tabs-buttons">
-      <button class="tabs-buttons__btn  tabs-buttons__btn--active  btn-js">HTML</button>
+      <button class="tabs-buttons__btn  tabs-buttons__btn_active  btn-js">HTML</button>
       <button class="tabs-buttons__btn  btn-js">CSS</button>
       <button class="tabs-buttons__btn  btn-js">JavaScript</button>
     </div>
 
     <div class="tabs-sections">
-      <div class="tabs-sections__section  tabs-sections__section--active  tab-js  tab-active-js">
+      <div class="tabs-sections__section  tabs-sections__section_active  tab-js  tab-active-js">
         <p>HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages.</p>
       </div>
       <div class="tabs-sections__section  tab-js">
@@ -31,9 +31,9 @@
 
   </main>
 
-  <script src="jtabs/jtabs.js" charset="utf-8"></script>
+  <script src="build/jtabs.min.js" charset="utf-8"></script>
   <script>
-    jTabs('.tabs-js', 'tabs-buttons__btn--active', 'tab-active-js');
+    jTabs('.tabs-container', 'tabs-block-buttons__btn_active', 'tab-active-js');
   </script>
 
 </body>
