@@ -14,7 +14,9 @@
  * - and switch them
  */
 
-let jTabs = function (container, activeBtnClass, activeTabClass) {
+import 'core-js/shim';
+
+export default function jTabs(container, activeBtnClass, activeTabClass) {
   container = document.querySelector(container);
   activeBtnClass = activeBtnClass || 'btn-active-js';
   activeTabClass = activeTabClass || 'tab-active-js';
@@ -35,8 +37,8 @@ let jTabs = function (container, activeBtnClass, activeTabClass) {
     * @param  {HTMLCollection} btns returns all buttons
     * @param  {Number} index is a number of current button
     */
-    eventBtn = function (btns, index) {
-      btns.addEventListener('click', function (btn) {
+    eventBtn = function(btns, index) {
+      btns.addEventListener('click', function(btn) {
         btn.preventDefault();
         goToTab(index);
       });
@@ -49,7 +51,7 @@ let jTabs = function (container, activeBtnClass, activeTabClass) {
     */
     for (buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
       let btnNum = buttons[buttonIndex];
-        eventBtn(btnNum, buttonIndex);
+      eventBtn(btnNum, buttonIndex);
     }
 
 
@@ -57,7 +59,7 @@ let jTabs = function (container, activeBtnClass, activeTabClass) {
     * goToTab toggles the active class
     * @param  {Number} index - the number of the button or tab
     */
-    goToTab = function (index) {
+    goToTab = function(index) {
       clearActiveClasses();
 
       if (index !== activeIndex && index >= 0 && index <= buttons.length) {
@@ -74,7 +76,7 @@ let jTabs = function (container, activeBtnClass, activeTabClass) {
     /**
     * clearActiveClasses removes active class from all tabs and sections
     */
-    clearActiveClasses = function () {
+    clearActiveClasses = function() {
       for (let tab = 0; tab < tabs.length; tab++) {
         tabs[tab].classList.remove(activeTabClass);
       }
@@ -87,5 +89,3 @@ let jTabs = function (container, activeBtnClass, activeTabClass) {
     return;
   }
 };
-
-export default jTabs;

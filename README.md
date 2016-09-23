@@ -31,12 +31,12 @@ are important and must contains following lines:
 
 # Simple usage
 
-Get static files from `build/jtabs.js` and `build/jtabs.css` and include them
+Get static files from `lib/jtabs.js` and `lib/jtabs.css` and include them
 in your HTML. By default HTML-markup looks like this:
 
 ```html
 <head>
-  <link rel="stylesheet" href="jtabs.css">
+  <link rel="stylesheet" href="css/jtabs.css">
 </head>
 <body>
   <div class="centering-layer  tabs-container"><!-- container -->
@@ -77,11 +77,11 @@ Include these files in your project (with gulp/webpack/etc) and import them.
 Script
 ```js
 // app.js
-import jTabs from 'path_to_node_modules/jtabs/jtabs';
-jTabs('.tabs-container');
+import jTabs from 'jtabs';
+jTabs('.tabs', 'tabs-block-buttons__btn_active');
 ```
 
-Style (only scss)
+Style (only scss yet)
 ```scss
 /* app.scss */
 @import 'path_to_node_modules/jtabs/jtabs.scss';
