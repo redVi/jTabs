@@ -14,8 +14,6 @@
  * - and switch them
  */
 
-import 'core-js/shim';
-
 export default function jTabs(container, activeBtnClass, activeTabClass) {
   container = document.querySelector(container);
   activeBtnClass = activeBtnClass || 'btn-active-js';

@@ -6,7 +6,7 @@ Demo: http://redvi.github.io/jTabs
 
 ## Description
 
-jTabs takes one reuired parameter `container` and two additional parameters:
+jTabs takes one required parameter `container` and two additional parameters:
 classes for active button and active tab.
 
 Your markup must have classes with prefix `-js` for correct work.
@@ -26,41 +26,6 @@ are important and must contains following lines:
 ```CSS
 .tab-js { display: none; }
 .tab-active-js { display: block; }
-```
-
-
-# Simple usage
-
-Get static files from `lib/jtabs.js` and `lib/jtabs.css` and include them
-in your HTML. By default HTML-markup looks like this:
-
-```html
-<head>
-  <link rel="stylesheet" href="css/jtabs.css">
-</head>
-<body>
-  <div class="centering-layer  tabs-container"><!-- container -->
-
-    <div class="tabs-block-buttons">
-      <button class="tabs-block-buttons__btn  tabs-block-buttons__btn_active  btn-js">HTML Active Tab</button>
-      <button class="tabs-block-buttons__btn  btn-js">CSS</button>
-    </div>
-
-    <div class="tabs-block-sections">
-      <div class="tabs-block-sections__section  tabs-block-sections__section_active  tab-js  tab-active-js">HTML Active Section</div>
-      <div class="tabs-block-sections__section  tab-js">CSS section</div>
-    </div>
-
-  </div>
-  <script src="js/jtabs.js"></script>
-  <script>
-    // Parameters:
-    // 1. wrapper class. Example: `.tabs-js`
-    // 2. any class for styling active button. Example: `tabs-block-buttons__btn--active`
-    // 3. any class for styling active tab. Example: 'tab-active-js'
-    jTabs('.tabs-container', 'tabs-block-buttons__btn_active', 'tab-active-js');
-  </script>
-</body>
 ```
 
 
@@ -84,5 +49,5 @@ jTabs('.tabs', 'tabs-block-buttons__btn_active');
 Style (only scss yet)
 ```scss
 /* app.scss */
-@import 'path_to_node_modules/jtabs/jtabs.scss';
+@import 'path_to_node_modules/jtabs/lib/jtabs.scss';
 ```

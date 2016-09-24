@@ -1,13 +1,8 @@
 {
   "name": "jtabs",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "The switcher of tabs in pure JavaScript",
   "main": "lib/jtabs.js",
-  "files": [
-    "lib/jtabs.js",
-    "lib/jtabs.css",
-    "src/jtabs.scss"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redVi/jTabs.git"
@@ -29,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/redVi/jTabs/issues"
   },
-  "homepage": "https://github.com/redVi/jTabs#readme"
+  "homepage": "https://github.com/redVi/jTabs#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
+  },
+  "scripts": {
+    "compile": "babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile"
+  }
 }
