@@ -51,7 +51,7 @@ var jTabs = (function (container, activeBtnClass, activeTabClass) {
     clearActiveClasses();
 
     /* switch classes */
-    if (index !== activeIndex && index >= 0 && index <= buttons.length) {
+    if (index >= 0 && index <= buttons.length) {
       buttons[index].classList.add(activeBtnClass);
       tabs[index].classList.add(activeTabClass);
       activeIndex = index;
