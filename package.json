@@ -1,6 +1,6 @@
 {
   "name": "jtabs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The switcher of tabs in pure JavaScript",
   "main": "lib/jtabs.js",
   "repository": {

@@ -55,12 +55,12 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
 
     /**
     * goToTab toggles the active class
-    * @param  {Number} index - the number of the button or tab
+    * @param {Number} index - the number of the button or tab
     */
     goToTab = function(index) {
       clearActiveClasses();
 
-      if (index !== activeIndex && index >= 0 && index <= buttons.length) {
+      if (index >= 0 && index <= buttons.length) {
         buttons[index].classList.add(activeBtnClass);
         tabs[index].classList.add(activeTabClass);
         activeIndex = index;
