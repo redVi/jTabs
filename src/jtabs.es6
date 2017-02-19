@@ -14,10 +14,11 @@
  * - and switch them
  */
 
-export default function jTabs(container, activeBtnClass, activeTabClass) {
-  container = document.querySelector(container);
-  activeBtnClass = activeBtnClass || 'btn-active-js';
-  activeTabClass = activeTabClass || 'tab-active-js';
+export default function jTabs(_container, _activeBtnClass, _activeTabClass) {
+
+  var container = document.querySelector(_container);
+  var activeBtnClass = _activeBtnClass || 'btn-active-js';
+  var activeTabClass = _activeTabClass || 'tab-active-js';
 
   if (container) {
     let buttons = container.querySelectorAll('.btn-js');
@@ -27,7 +28,6 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
     let eventBtn;
     let goToTab;
     let clearActiveClasses;
-
 
     /**
     * eventBtn sets event handlers for each button
@@ -42,7 +42,6 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
       });
     };
 
-
     /**
     * buttonIndex is a number of current button
     * @type {Number}
@@ -51,7 +50,6 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
       let btnNum = buttons[buttonIndex];
       eventBtn(btnNum, buttonIndex);
     }
-
 
     /**
     * goToTab toggles the active class
@@ -64,17 +62,11 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
         buttons[index].classList.add(activeBtnClass);
         tabs[index].classList.add(activeTabClass);
         activeIndex = index;
-      } else if (activeIndex === 0) {
-        buttons[activeIndex].classList.add(activeBtnClass);
-        tabs[activeIndex].classList.add(activeTabClass);
       }
     };
 
-
-    /**
-    * clearActiveClasses removes active class from all tabs and sections
-    */
     clearActiveClasses = function() {
+      /* clearActiveClasses removes active class from all tabs and sections */
       for (let tab = 0; tab < tabs.length; tab++) {
         tabs[tab].classList.remove(activeTabClass);
       }
@@ -83,7 +75,5 @@ export default function jTabs(container, activeBtnClass, activeTabClass) {
         buttons[button].classList.remove(activeBtnClass);
       }
     };
-  } else {
-    return;
   }
 };
