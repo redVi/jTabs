@@ -1,25 +1,13 @@
 /*
 * jTabs --- the tabs in pure JavaScript
-* repository: https://github.com/redVi/jTabs
-* demo: http://redvi.github.io/jTabs
-* ========================================================================== */
-
-/* == PARAMETERS ==
- * reuired parameter: container
- * additional parameters: activeBtnClass, activeTabClass
- *
- * == HOW IT WORKS ==
- * - take DOM-container as parameter
- * - search tabs and sections
- * - and switch them
  */
 
-var jTabs = (function (container, activeBtnClass, activeTabClass) {
+var jTabs = (function (_container, _activeBtnClass, _activeTabClass) {
   'use strict';
 
-  var container      = document.querySelector(container);
-  var activeBtnClass = activeBtnClass || 'tabs-buttons__btn--active';
-  var activeTabClass = activeTabClass || 'tab-active-js';
+  var container      = document.querySelector(_container);
+  var activeBtnClass = _activeBtnClass || 'tabs-buttons__btn--active';
+  var activeTabClass = _activeTabClass || 'tab-active-js';
 
   if (!container) { return false; }
 
@@ -55,9 +43,6 @@ var jTabs = (function (container, activeBtnClass, activeTabClass) {
       buttons[index].classList.add(activeBtnClass);
       tabs[index].classList.add(activeTabClass);
       activeIndex = index;
-    } else if (activeIndex === 0) {
-      buttons[activeIndex].classList.add(activeBtnClass);
-      tabs[activeIndex].classList.add(activeTabClass);
     }
   };
 
