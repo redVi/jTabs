@@ -2,7 +2,7 @@
 
 The switcher of tabs in pure JavaScript.
 
-Demo: http://redvi.github.io/jTabs
+Demo: http://octowed.github.io/jTabs
 
 ## Description
 

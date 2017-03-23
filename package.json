@@ -1,30 +1,30 @@
 {
   "name": "jtabs",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "The switcher of tabs in pure JavaScript",
   "main": "lib/jtabs.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redVi/jTabs.git"
+    "url": "git+https://github.com/octowed/jTabs.git"
   },
   "keywords": [
     "tabs",
     "responsive",
     "JavaScript"
   ],
-  "author": "redVi <liberty195@gmail.com>",
+  "author": "I.Shefer <liberty195@gmail.com>",
   "contributors": [
     {
-      "name": "redVi",
+      "name": "I.Shefer",
       "email": "liberty195@gmail.com",
-      "url": "http://redvi.github.io/"
+      "url": "http://octowed.github.io/"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/redVi/jTabs/issues"
+    "url": "https://github.com/octowed/jTabs/issues"
   },
-  "homepage": "https://github.com/redVi/jTabs#readme",
+  "homepage": "https://github.com/octowed/jTabs#readme",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
