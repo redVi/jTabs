@@ -6,3 +6,7 @@ Bugfixes:
 ## 3.0.2
 
 Remove redundant code
+
+## 4.0.0
+
+Added ES6 syntax. You can pass all parameters when calling the function.
