@@ -1,7 +1,7 @@
 # jTabs
 Tabs in pure JavaScript.
 
-Demo: http://octowed.github.io/jTabs
+Demo: http://redvi.github.io/jTabs
 
 ## How to use
 
@@ -49,7 +49,7 @@ jTabs({
 ```
 
 Customize the styles as you want. But **don't forget**: styles for active tab
-are important and must contains following lines:
+are important and must contain following lines:
 
 ```css
 .tab-js { display: none; }

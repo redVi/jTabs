@@ -1,11 +1,11 @@
 {
   "name": "jtabs",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Tabs in pure JavaScript",
   "main": "lib/jtabs.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/octowed/jTabs.git"
+    "url": "git+https://github.com/redvi/jTabs.git"
   },
   "keywords": [
     "tabs",
@@ -17,14 +17,14 @@
     {
       "name": "I.Shefer",
       "email": "liberty195@gmail.com",
-      "url": "http://octowed.github.io/"
+      "url": "http://redvi.github.io/jTabs"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/octowed/jTabs/issues"
+    "url": "https://github.com/redvi/jTabs/issues"
   },
-  "homepage": "https://github.com/octowed/jTabs#readme",
+  "homepage": "https://github.com/redvi/jTabs#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
