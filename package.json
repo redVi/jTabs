@@ -1,37 +1,24 @@
 {
   "name": "jtabs",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "Tabs in pure JavaScript",
   "main": "lib/jtabs.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "compile": "tsc",
+    "prepublish": "npm run compile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redvi/jTabs.git"
   },
   "keywords": [
-    "tabs",
-    "responsive",
-    "JavaScript"
-  ],
-  "author": "I.Shefer <liberty195@gmail.com>",
-  "contributors": [
-    {
-      "name": "I.Shefer",
-      "email": "liberty195@gmail.com",
-      "url": "http://redvi.github.io/jTabs"
-    }
+    "tabs"
   ],
   "license": "MIT",
+  "author": "I.Shefer <liberty195@gmail.com>",
   "bugs": {
     "url": "https://github.com/redvi/jTabs/issues"
   },
-  "homepage": "https://github.com/redvi/jTabs#readme",
-  "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-preset-es2015": "^6.24.0"
-  },
-  "scripts": {
-    "compile": "babel --presets es2015 -d lib/ src/",
-    "prepublish": "npm run compile"
-  }
+  "homepage": "https://github.com/redvi/jTabs#readme"
 }

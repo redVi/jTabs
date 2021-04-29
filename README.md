@@ -11,47 +11,49 @@ $ npm install --save jtabs
 
 Include these files in your project (with gulp/webpack/etc) and import them.
 
-### Markup example (if you want to use default styles see `index.html` for details)
+### Markup example
 
 ```html
-<main class="tabs-container">
+<section class="tabs-container">
     <div class="tabs-buttons">
-        <button class="btn-js btn-active-js">Active Tab</button>
-        <button class="btn-js">Tab</button>
+        <button class="tabs-buttons__btn tabs-buttons__btn_active">HTML</button>
+        <button class="tabs-buttons__btn">CSS</button>
     </div>
 
     <div class="tabs-sections">
-        <section class="tab-js tab-active-js">Text</section>
-        <section class="tab-js">Text</section>
+        <div class="tabs-sections__section tabs-sections__section_active">
+            <p>Text</p>
+        </div>
+        <div class="tabs-sections__section">
+            <p>Another text</p>
+        </div>
     </div>
-</main>
+</section>
 ```
 ### Scripts
 
 ```js
-// app.js
-import jTabs from 'jtabs';
-var container = document.querySelector('.tabs-container');
+import { JTabs } from 'jtabs';
+import 'jtabs/lib/jtabs.min.css';
 
-jTabs({
-    container      : container,
-    buttons        : container.querySelectorAll('.btn-js'),
-    tabs           : container.querySelectorAll('.tab-js'),
-    activeBtnClass : 'btn-active-js',
-    activeTabClass : 'tab-active-js'
-});
-```
-### Default styles
-
-```css
-/* app.css */
-@import 'path_to_node_modules/jtabs/lib/jtabs.css';
+const tabs = new JTabs({ container: '.tabs-container' });
+tabs.init();
 ```
 
-Customize the styles as you want. But **don't forget**: styles for active tab
-are important and must contain following lines:
+### Options
 
-```css
-.tab-js { display: none; }
-.tab-active-js { display: block; }
+| Option         | Default value   |
+| -------------- | --------------- |
+| container      | '.tabs-container' |
+| button         | '.tabs-buttons__btn' |
+| tab            | '.tabs-sections__section' |
+| activeBtnClass | 'tabs-buttons__btn_active' |
+| activeTabClass | 'tabs-sections__section_active' |
+
+## Development
+
 ```
+$ npm i -g static-server typescript
+$ npm run compile && static-server lib
+```
+
