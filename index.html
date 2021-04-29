@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/jtabs.css">
+  <link rel="stylesheet" href="jtabs.min.css">
   <title>JavaScript Tabs</title>
 </head>
 
 <body>
   <h1 class="tabs-header">jTabs &mdash; pure JavaScript tabs</h1>
-  <main class="centering-layer  tabs-js">
-
-    <div class="tabs-buttons">
-      <button class="tabs-buttons__btn  tabs-buttons__btn--active  btn-js">HTML</button>
-      <button class="tabs-buttons__btn  btn-js">CSS</button>
-      <button class="tabs-buttons__btn  btn-js">JavaScript</button>
-    </div>
-
-    <div class="tabs-sections">
-      <div class="tabs-sections__section  tabs-sections__section--active  tab-js  tab-active-js">
-        <p>HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology used to create web pages, as well as to create user interfaces for mobile and web applications. Web browsers can read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically and, before the advent of Cascading Style Sheets (CSS), included cues for the presentation or appearance of the document (web page), making it a markup language, rather than a programming language.</p>
+  <main class="centering-layer">
+    <section class="tabs-container">
+      <div class="tabs-buttons">
+        <button class="tabs-buttons__btn tabs-buttons__btn_active">HTML</button>
+        <button class="tabs-buttons__btn">CSS</button>
+        <button class="tabs-buttons__btn">JavaScript</button>
       </div>
-      <div class="tabs-sections__section  tab-js">
-        <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.</p>
-      </div>
-      <div class="tabs-sections__section  tab-js">
-        <p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification.</p>
-      </div>
-    </div>
 
+      <div class="tabs-sections">
+        <div class="tabs-sections__section tabs-sections__section_active">
+          <p>HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web
+            pages.</p>
+        </div>
+        <div class="tabs-sections__section">
+          <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+            in
+            a markup language.</p>
+        </div>
+        <div class="tabs-sections__section">
+          <p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language.</p>
+        </div>
+      </div>
+    </section>
+
+    <br />
+
+    <section class="tabs-container">
+      <div class="tabs-buttons">
+        <button class="tabs-buttons__btn tabs-buttons__btn_active">React</button>
+        <button class="tabs-buttons__btn">Vue</button>
+        <button class="tabs-buttons__btn">Angular</button>
+      </div>
+
+      <div class="tabs-sections">
+        <div class="tabs-sections__section tabs-sections__section_active">
+          <p>A JavaScript library for building user interfaces.</p>
+        </div>
+        <div class="tabs-sections__section">
+          <p>The Progressive JavaScript Framework.</p>
+        </div>
+        <div class="tabs-sections__section">
+          <p>The modern web developer's platform.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="js/jtabs.js" charset="utf-8"></script>
-  <script>
-    jTabs('.tabs-js', 'tabs-buttons__btn--active', 'tab-active-js');
-  </script>
-
+  <script src="example.js" charset="utf-8" type="module"></script>
 </body>
+
 </html>
